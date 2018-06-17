@@ -1,0 +1,3 @@
+
+
+dlug(amount: Decimal): Boolean protected, abstract;

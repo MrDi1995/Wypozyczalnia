@@ -1,0 +1,6 @@
+nastKlientNum():Integer updating;
+
+begin
+self.klientNum := self.klientNum + 1;
+return self.klientNum;
+end;

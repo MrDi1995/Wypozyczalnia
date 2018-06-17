@@ -1,0 +1,6 @@
+
+
+zaplacone(amount: Decimal) updating;
+begin
+self.cena := self.cena + amount;
+end;

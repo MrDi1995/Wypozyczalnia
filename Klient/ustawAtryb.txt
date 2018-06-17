@@ -1,0 +1,6 @@
+ustawAtryb(adr, im, nazw: String) updating;
+begin
+self.adres := adr.trimBlanks();
+self.imie := im.trimBlanks();
+self.nazwisko := nazw.trimBlanks();
+end;

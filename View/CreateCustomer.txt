@@ -1,0 +1,11 @@
+
+
+createCustomer() protected;
+vars
+cust: Klient;
+begin
+beginTransaction;
+create cust persistent;
+cust.ustawAtryb(adres.text, imie.text, nazwisko.text);
+commitTransaction;
+end;

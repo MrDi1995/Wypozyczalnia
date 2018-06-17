@@ -1,0 +1,16 @@
+filtrowanie(): ListaKlientow serverExecution;
+vars
+dict: KlienciNazwisko;
+array: ListaKlientow;
+cust: Klient;
+begin
+dict := KlienciNazwisko.firstInstance();
+create array transient;
+foreach cust in dict where app.isValidObject(cust)
+and cust.adres = "Warszawa" do
+array.add(cust);
+endforeach;
+write dict.size();
+write array.size();
+return array;
+end;

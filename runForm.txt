@@ -1,0 +1,13 @@
+
+
+runForm();
+vars
+form: KlientDodawanie;
+begin
+app.initialize();
+create form transient;
+form.show();
+// Wait five seconds then close
+app.doWindowEvents(5000);
+form.unloadForm();
+end;

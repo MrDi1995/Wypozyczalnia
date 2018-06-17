@@ -1,0 +1,7 @@
+
+
+nstNrKontaWypozyczen(): Integer updating;
+begin
+self.nrKonta := self.nrKonta + 1;
+return self.nrKonta;
+end;

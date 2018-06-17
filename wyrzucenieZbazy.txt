@@ -1,0 +1,12 @@
+wyrzucenieZbazy();
+
+begin
+	beginTransaction;
+	Klient.instances.purge();
+	WypozyczalniaFilmow.instances.purge();
+	Film.instances.purge();
+	KontoWypozyczen.instances.purge();
+	
+	
+	commitTransaction;
+end;

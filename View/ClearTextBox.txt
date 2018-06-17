@@ -1,0 +1,7 @@
+clearTextBox() protected;
+begin
+nazwisko.text := "";
+imie.text := "";
+adres.text := "";
+nazwisko.setFocus();
+end;

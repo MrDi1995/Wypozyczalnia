@@ -1,0 +1,9 @@
+utworzKlienta();
+vars
+cust: Klient;
+begin
+beginTransaction;
+create cust persistent;
+cust.ustawAtryb("Warszawa", "Janusz", "Kowalski");
+commitTransaction;
+end;

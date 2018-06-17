@@ -1,0 +1,19 @@
+usunKlienta();
+
+vars
+	dict: KlienciNazwisko;
+	cust: Klient;
+	i:	  Integer;
+begin
+	dict := KlienciNazwisko.firstInstance();
+	beginTransaction;
+	foreach cust in dict where cust.nazwisko[1] >= "J" do
+		if cust.nazwisko[1] >= "K" then
+			break;
+		endif;
+		delete cust;
+		i := i + 1;
+	endforeach;
+	commitTransaction;
+	write i.String & " klient usuniety";
+end;

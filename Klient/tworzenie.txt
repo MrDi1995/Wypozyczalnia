@@ -1,0 +1,5 @@
+tworzenie() updating;
+
+begin
+self.numer := app.mojaWypozyczalnia.nastKlientNum();
+end;

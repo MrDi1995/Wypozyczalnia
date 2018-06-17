@@ -1,0 +1,36 @@
+
+isDataValid():Boolean protected;
+
+
+
+begin
+
+	if nazwisko.text = "" then
+
+		nazwisko.setFocus();
+
+		statusLine.caption := "Wprowadz nazwisko";
+
+		return false;
+
+	elseif imie.text = "" then
+
+		imie.setFocus();
+
+		statusLine.caption := "Wprowadz imie";
+
+		return false;
+
+	elseif adres.text = "" then
+
+		adres.setFocus();
+
+		statusLine.caption := "Wprowadz adres";
+
+		return false;
+
+	endif;
+
+	return true;
+
+end;

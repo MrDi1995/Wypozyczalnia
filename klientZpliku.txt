@@ -1,0 +1,32 @@
+
+
+klientZpliku();
+
+
+vars
+dlg: CMDFileOpen;
+file: File;
+str: String;
+cust: Klient;
+begin
+app.initialize();
+create dlg transient;
+if not dlg.open() = 0 then
+// Exit as user did not select a file
+return;
+endif;
+create file transient;
+// file.fileName := "C:\JadeCourse\Files\Customers.txt";
+file.fileName := dlg.fileName;
+while not file.endOfFile() do
+str := file.readLine();
+beginTransaction;
+create cust persistent;
+cust.ustawAtryb(str[41:end], str[16:25], str[1:15]);
+commitTransaction;
+endwhile;
+epilog
+delete dlg;
+delete file;
+end;
+

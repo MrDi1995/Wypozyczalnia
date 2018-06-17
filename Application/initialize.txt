@@ -1,0 +1,11 @@
+initialize() updating;
+
+begin 
+	inheritMethod();
+	self.mojaWypozyczalnia := WypozyczalniaFilmow.firstInstance();
+	if self.mojaWypozyczalnia = null then
+		beginTransaction;
+		create mojaWypozyczalnia persistent;
+		commitTransaction;
+	endif;
+end;

@@ -1,0 +1,7 @@
+
+
+stworz() updating;
+
+begin
+self.numer := app.mojaWypozyczalnia.nstNrKontaWypozyczen();
+end;
